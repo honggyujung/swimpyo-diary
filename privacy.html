@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보처리방침 · 쉼표 일기</title>
+<style>
+  :root { --bg: #F6F3EE; --surface: #FFFFFF; --text: #23231F; --text-2: #5B5A54; --accent: #5E8B6E; --border: #E4DFD6; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #171816; --surface: #212320; --text: #ECEBE6; --text-2: #A9A8A1; --accent: #8DB89B; --border: #34362F; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.75 -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 40px 16px 64px; }
+  h1 { font-size: 26px; margin: 0 0 4px; letter-spacing: -0.5px; }
+  .meta { color: var(--text-2); font-size: 14px; margin: 0 0 24px; }
+  h2 { font-size: 18px; margin: 32px 0 8px; }
+  ul { padding-left: 20px; margin: 8px 0; }
+  li { margin: 4px 0; }
+  .note { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 14px 16px; }
+  code { font-size: 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 1px 6px; overflow-wrap: anywhere; }
+  a { color: var(--accent); font-weight: 700; }
+</style>
+</head>
+<body>
+<main>
+  <p><a href="./">← 쉼표 일기</a></p>
+  <h1>개인정보처리방침</h1>
+  <p class="meta">시행일: 2026년 10월 10일</p>
+
+  <p>
+    쉼표 일기(이하 "앱")는 개인이 만든 감사 일기 앱입니다. 앱에는 개발자가 운영하는 서버가 없으며,
+    개발자는 사용자의 개인정보를 수집하거나 보관하지 않습니다.
+  </p>
+
+  <h2>1. 앱이 다루는 정보</h2>
+  <ul>
+    <li>사용자가 직접 적는 기록: 감사 항목(무엇 · 왜 · 태그), 기분, 하루 메모, 시간 · 휴일 탭 설정, 앱 설정</li>
+    <li>이 정보는 <b>사용자의 기기 안</b>에 저장됩니다.</li>
+  </ul>
+
+  <h2>2. Google 사용자 데이터 (드라이브 동기화)</h2>
+  <p>사용자가 앱에서 "구글 계정 연결"을 켠 경우에만 다음과 같이 Google 드라이브를 사용합니다.</p>
+  <ul>
+    <li><b>접근 범위:</b> Google 드라이브의 <b>이 앱 전용 숨김 폴더(appDataFolder)</b>만 사용합니다
+      (권한 범위 <code>https://www.googleapis.com/auth/drive.appdata</code>).
+      사용자의 다른 드라이브 파일은 읽거나 수정할 수 없고, 하지 않습니다.</li>
+    <li><b>사용 목적:</b> 사용자 본인의 기기(안드로이드 폰, Mac) 사이에서 1번의 앱 기록을 동기화하는 것뿐입니다.</li>
+    <li><b>저장 위치:</b> 데이터는 사용자의 기기와 사용자 본인의 Google 드라이브 사이에서만 오갑니다. 개발자 서버를 거치지 않습니다.</li>
+    <li><b>공유:</b> Google 사용자 데이터를 판매하거나 광고에 사용하지 않으며, 아래 3번의 경우를 제외하고 제3자에게 전송하지 않습니다.
+      개발자를 포함한 누구도 이 데이터를 열람하지 않습니다.</li>
+  </ul>
+  <p class="note">
+    쉼표 일기가 Google API로부터 받은 정보를 사용하고 다른 앱으로 전송하는 방식은
+    <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API 서비스 사용자 데이터 정책</a>의
+    제한적 사용(Limited Use) 요구사항을 포함하여 해당 정책을 준수합니다.
+  </p>
+
+  <h2>3. AI 도우미 (선택 기능)</h2>
+  <ul>
+    <li>사용자가 AI 도우미를 켜고 <b>본인의 API 키</b>를 입력한 경우에만 동작합니다.</li>
+    <li>질문 만들기, 주간 편지 같은 기능을 실행할 때, 그 기능에 필요한 감사 기록과 기분 이름이
+      사용자가 고른 AI 제공사(OpenAI, Google Gemini, Anthropic Claude 중 하나)로 <b>사용자의 기기에서 직접</b> 전송됩니다.</li>
+    <li>하루 메모는 AI로 보내지 않습니다.</li>
+    <li>API 키는 그 기기에만 저장되며, 동기화나 백업 파일에 포함되지 않습니다.</li>
+    <li>전송된 내용의 처리는 각 AI 제공사의 정책을 따릅니다.</li>
+  </ul>
+
+  <h2>4. 그 밖의 네트워크 사용</h2>
+  <ul>
+    <li>공휴일 정보: 공공데이터포털에서 공휴일 목록만 받아옵니다. 개인정보는 보내지 않습니다.</li>
+    <li>드라이브 일기 가져오기(선택): 사용자가 링크로 공유한 폴더의 일기 텍스트 파일을 읽기만 합니다.</li>
+  </ul>
+
+  <h2>5. 보관과 삭제</h2>
+  <ul>
+    <li>기기의 기록은 앱을 삭제하면 함께 삭제됩니다. 앱의 "데이터 내보내기"로 미리 백업할 수 있습니다.</li>
+    <li>드라이브에 저장된 동기화 데이터는 Google 드라이브 웹 → 설정 → <b>앱 관리</b> → 쉼표 일기 → <b>숨겨진 앱 데이터 삭제</b>로 지울 수 있습니다.</li>
+    <li>연결 해제는 앱의 설정에서 하거나, Google 계정 → 보안 → <b>서드 파티 앱 및 서비스</b>에서 쉼표 일기의 액세스를 삭제하면 됩니다.</li>
+  </ul>
+
+  <h2>6. 변경</h2>
+  <p>이 방침이 바뀌면 이 페이지를 고치고 위의 시행일을 갱신합니다.</p>
+</main>
+</body>
+</html>
